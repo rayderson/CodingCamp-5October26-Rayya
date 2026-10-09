@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloomy Life Dashboard 🌷</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <div>
+            <p class="mini-title">✿ MY LITTLE SPACE</p>
+            <h1>Bloomy Dashboard 🌷</h1>
+        </div>
+
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">
+            🌙
+        </button>
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- GREETING -->
+        <section class="welcome-card card">
+            <div>
+                <p id="greeting" class="greeting">
+                    Good morning! ☀️
+                </p>
+
+                <h2>
+                    Hi, <span id="displayName">Bestie</span>! ♡
+                </h2>
+
+                <p id="dateDisplay" class="date">
+                    Loading date...
+                </p>
+            </div>
+
+            <div class="clock-box">
+                <span>🕐</span>
+                <strong id="clock">00:00:00</strong>
+            </div>
+        </section>
+
+
+        <div class="main-grid">
+
+            <!-- TODO SECTION -->
+            <section class="card todo-card">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">TODAY'S PLAN ✨</p>
+                        <h2>My To-Do List</h2>
+                    </div>
+
+                    <span id="taskCounter" class="counter">
+                        0 tasks
+                    </span>
+                </div>
+
+
+                <!-- ADD TASK -->
+                <form id="taskForm" class="task-form">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you want to do?"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        + Add
+                    </button>
+
+                </form>
+
+
+                <!-- SORT -->
+                <div class="task-tools">
+
+                    <label for="sortTasks">
+                        Sort:
+                    </label>
+
+                    <select id="sortTasks">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="completed">Completed</option>
+                        <option value="active">Active</option>
+                    </select>
+
+                </div>
+
+
+                <!-- TASK LIST -->
+                <ul id="taskList" class="task-list"></ul>
+
+                <p id="emptyMessage" class="empty-message">
+                    🌱 No tasks yet. Let's make today productive!
+                </p>
+
+            </section>
+
+
+            <!-- SIDE COLUMN -->
+            <aside class="side-column">
+
+                <!-- POMODORO -->
+                <section class="card timer-card">
+
+                    <p class="eyebrow">FOCUS TIME 🍅</p>
+
+                    <h2>Pomodoro</h2>
+
+                    <div id="timer" class="timer">
+                        25:00
+                    </div>
+
+                    <p id="timerStatus" class="timer-status">
+                        Ready when you are ♡
+                    </p>
+
+                    <div class="timer-buttons">
+                        <button id="startTimer">
+                            ▶ Start
+                        </button>
+
+                        <button id="pauseTimer">
+                            ⏸ Pause
+                        </button>
+
+                        <button id="resetTimer">
+                            ↻ Reset
+                        </button>
+                    </div>
+
+
+                    <div class="pomodoro-setting">
+
+                        <label for="pomodoroMinutes">
+                            Focus duration
+                        </label>
+
+                        <div class="duration-control">
+                            <input
+                                type="number"
+                                id="pomodoroMinutes"
+                                min="1"
+                                max="120"
+                                value="25"
+                            >
+
+                            <span>minutes</span>
+
+                            <button id="saveDuration" type="button">
+                                Save
+                            </button>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- QUICK LINKS -->
+                <section class="card links-card">
+
+                    <div class="section-title">
+                        <div>
+                            <p class="eyebrow">SHORTCUTS 🔗</p>
+                            <h2>Quick Links</h2>
+                        </div>
+                    </div>
+
+
+                    <div id="linksContainer" class="links-container"></div>
+
+
+                    <form id="linkForm" class="link-form">
+
+                        <input
+                            type="text"
+                            id="linkName"
+                            placeholder="Website name"
+                        >
+
+                        <input
+                            type="url"
+                            id="linkURL"
+                            placeholder="https://..."
+                        >
+
+                        <button type="submit">
+                            Add Link
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- PERSONALIZATION -->
+                <section class="card personalize-card">
+
+                    <p class="eyebrow">MAKE IT YOURS 💌</p>
+
+                    <h2>Personalize</h2>
+
+                    <div class="name-setting">
+
+                        <input
+                            type="text"
+                            id="nameInput"
+                            placeholder="Your name"
+                        >
+
+                        <button id="saveName">
+                            Save
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        Made with ♡ and a little bit of procrastination ✨
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

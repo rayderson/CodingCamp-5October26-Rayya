@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+:root {
+    --bg: #fff8fb;
+    --card: #ffffff;
+
+    --primary: #e98aaa;
+    --primary-dark: #c96789;
+    --secondary: #f8d9e5;
+
+    --text: #493b43;
+    --muted: #927f89;
+
+    --border: #f1dce4;
+
+    --shadow: 0 12px 35px rgba(182, 119, 143, 0.12);
+
+    --success: #78b89b;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffe7f0 0,
+            transparent 30%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 30px 25px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mini-title,
+.eyebrow {
+    color: var(--primary-dark);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 5px;
+}
+
+
+.topbar h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2rem;
+}
+
+
+.icon-btn {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 1.1rem;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.2s;
+}
+
+
+.icon-btn:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.dashboard {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 10px 25px 50px;
+}
+
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 25px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background 0.3s ease,
+        border 0.3s ease;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff2f7
+        );
+}
+
+
+.greeting {
+    color: var(--primary-dark);
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.welcome-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 5px;
+}
+
+
+.date {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+
+.clock-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: var(--secondary);
+
+    padding: 14px 18px;
+
+    border-radius: 16px;
+}
+
+
+.clock-box strong {
+    font-size: 1.1rem;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.main-grid {
+    display: grid;
+
+    grid-template-columns: 1.6fr 1fr;
+
+    gap: 25px;
+}
+
+
+.side-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.section-title h2,
+.timer-card h2,
+.links-card h2,
+.personalize-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.4rem;
+}
+
+
+.counter {
+    background: var(--secondary);
+
+    color: var(--primary-dark);
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   TODO
+========================= */
+
+.task-form {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.task-form input,
+.link-form input,
+.name-setting input,
+.duration-control input {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    border-radius: 12px;
+
+    padding: 12px 14px;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+
+.task-form input:focus,
+.link-form input:focus,
+.name-setting input:focus {
+    border-color: var(--primary);
+}
+
+
+button {
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 11px 16px;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+.task-tools {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+
+.task-tools select {
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+}
+
+
+.task-list {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-height: 430px;
+
+    overflow-y: auto;
+
+    padding-right: 3px;
+}
+
+
+.task-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+}
+
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+
+    color: var(--muted);
+}
+
+
+.task-check {
+    width: 20px;
+    height: 20px;
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+}
+
+
+.task-text {
+    flex: 1;
+
+    font-size: 0.92rem;
+
+    word-break: break-word;
+}
+
+
+.task-actions {
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.task-actions button {
+    padding: 7px 9px;
+
+    font-size: 0.75rem;
+}
+
+
+.edit-btn {
+    background: #d9a6ba;
+}
+
+
+.delete-btn {
+    background: #d97f8e;
+}
+
+
+.empty-message {
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 35px 10px;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer-card {
+    text-align: center;
+}
+
+
+.timer-card .eyebrow {
+    margin-bottom: 5px;
+}
+
+
+.timer {
+    font-size: 4rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--primary-dark);
+
+    margin: 15px 0 5px;
+}
+
+
+.timer-status {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    margin-bottom: 18px;
+}
+
+
+.timer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.timer-buttons button {
+    font-size: 0.78rem;
+
+    padding: 9px 12px;
+}
+
+
+.timer-buttons button:nth-child(2) {
+    background: #c7a4b4;
+}
+
+
+.timer-buttons button:nth-child(3) {
+    background: #9c8791;
+}
+
+
+.pomodoro-setting {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: left;
+}
+
+
+.pomodoro-setting label {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+
+    margin-bottom: 7px;
+}
+
+
+.duration-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.duration-control input {
+    width: 65px;
+
+    padding: 8px;
+}
+
+
+.duration-control span {
+    color: var(--muted);
+
+    font-size: 0.8rem;
+
+    flex: 1;
+}
+
+
+.duration-control button {
+    padding: 8px 10px;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.links-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.quick-link {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 11px;
+
+    border-radius: 12px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 0.8rem;
+
+    transition: 0.2s;
+}
+
+
+.quick-link:hover {
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+
+.remove-link {
+    background: transparent;
+
+    color: var(--muted);
+
+    padding: 0;
+
+    font-size: 0.8rem;
+}
+
+
+.remove-link:hover {
+    background: transparent;
+
+    color: #d66;
+}
+
+
+.link-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.link-form button {
+    width: 100%;
+}
+
+
+/* =========================
+   PERSONALIZE
+========================= */
+
+.name-setting {
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 15px;
+}
+
+
+.name-setting button {
+    white-space: nowrap;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+
+    padding: 10px 20px 30px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    --bg: #211c22;
+    --card: #2d252d;
+
+    --text: #f8eaf0;
+    --muted: #bbaab3;
+
+    --border: #493b45;
+
+    --secondary: #49303e;
+
+    --shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+body.dark .welcome-card {
+    background: linear-gradient(
+        135deg,
+        #2d252d,
+        #382932
+    );
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .topbar {
+        padding: 22px 16px 10px;
+    }
+
+
+    .topbar h1 {
+        font-size: 1.5rem;
+    }
+
+
+    .dashboard {
+        padding: 10px 16px 35px;
+    }
+
+
+    .welcome-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .clock-box {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .card {
+        padding: 18px;
+
+        border-radius: 19px;
+    }
+
+
+    .task-form {
+        flex-direction: column;
+    }
+
+
+    .links-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .timer {
+        font-size: 3.2rem;
+    }
+
+}
